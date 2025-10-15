@@ -1,0 +1,30 @@
+/* Nota: Inicia o header no canto superior esquerdo da tela*/
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.HeaderHome {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(113, 197, 91, 0.7), rgba(0, 82, 0, 1));
+
+    
+  }
+
+
+  .UserButton {
+    background-color: black;
+    border-radius: 100%;
+ 
+  }
