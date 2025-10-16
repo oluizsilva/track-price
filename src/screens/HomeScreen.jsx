@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CardNota from "../components/CardNota";
 import { User } from "lucide-react";
+import { ScanLine } from "lucide-react";
 
 import "./HomeScreen.css";
 
@@ -35,7 +36,7 @@ function HomeScreen() {
   return (
     <>
       <header className="HeaderHome">
-        <span>Track Price</span>
+        <span className="HeaderTitle"> Track Price</span>
         <button className="UserButton">
           <User /> {/* TODO: foto e nome inseridos pelo user */}
         </button>
@@ -45,16 +46,16 @@ function HomeScreen() {
         <div className="ResumoMes">
           <div className="MesInfo">
             <h3>{"<Outubro de 2025>"}</h3> {/* TODO: Deverá ser dinâmico */}
-            <h4>Preço: R$ {totalMes}</h4> {/* TODO: Deverá ser dinâmico */}
+            <h4>Total Mensal: R$ {totalMes}</h4> {/* TODO: Deverá ser dinâmico */}
           </div>
 
-          <div className="BotaoQR">
-            <button> Gerar QR Code</button>
+          <div>
+            <button className="BotaoQR"> <ScanLine />Ler QR Code</button>
           </div>
         </div>
 
         <div className="ContainerNotas">
-          <h2>Suas Notas</h2>
+          <h2 className="ContainerTitulo">Suas Notas</h2>
           <div className="NotasList">
             {testeNotas.map((nota) => (
               <CardNota

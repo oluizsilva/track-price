@@ -5,30 +5,78 @@ html,
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: Montserrat, sans-serif;
+  
 }
 
 .HeaderHome {
-    display: flex;
-    font-size: 30px;
-    align-items: center;
-    height: 10vh;
-    width: 100vw;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  justify-content: space-between;
+  background-color: #4fa340;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
 
-    justify-content: space-between;
-    background: linear-gradient(to bottom, rgba(113, 197, 91, 0.7), rgba(0, 82, 0, 1));
+.HeaderTitle {
+  margin-left: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-    
-  }
-
+}
 
 .UserButton {
   background-color: black;
-  border-radius: 100%;
- 
+  border-radius: 80%;
+  font-size: 4px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  width: 8vh;
 }
 
-.ResumoMes{
+.ResumoMes {
+ 
+  display: flex; 
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.BotaoQR {
+  background-color: #71c55b;
+  width: 167px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.ContainerNotas {
+  display: flex; 
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.ContainerTitulo {
+  
+  
+
   
 }
+ 
