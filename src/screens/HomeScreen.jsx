@@ -1,8 +1,37 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import CardNota from "../components/CardNota";
 import { User } from "lucide-react";
+
 import "./HomeScreen.css";
 
 function HomeScreen() {
+  const testeNotas = [
+    {
+      id: 1,
+      titulo: "Rodrigues Supermercado",
+      valor: 150.0,
+      data: "20/09/2025",
+      hora: "14:30",
+    },
+    {
+      id: 2,
+      titulo: "Felix Supermercado",
+      valor: 2000.0,
+      data: "18/09/2025",
+      hora: "10:00",
+    },
+    {
+      id: 3,
+      titulo: "Farmácia Saúde",
+      valor: 25.5,
+      data: "15/09/2025",
+      hora: "16:45",
+    },
+  ];
+
+  const totalMes = testeNotas.reduce((acc, nota) => acc + nota.valor, 0);
+
   return (
     <>
       <header className="HeaderHome">
@@ -15,12 +44,28 @@ function HomeScreen() {
       <main className="MainHome">
         <div className="ResumoMes">
           <div className="MesInfo">
-            <h2>{"<Outubro de 2025>"}</h2> {/* TODO: Deverá ser dinâmico */}
-            <h3>Preço: R$ 300,00</h3> {/* TODO: Deverá ser dinâmico */}
+            <h3>{"<Outubro de 2025>"}</h3> {/* TODO: Deverá ser dinâmico */}
+            <h4>Preço: R$ {totalMes}</h4> {/* TODO: Deverá ser dinâmico */}
           </div>
 
           <div className="BotaoQR">
-            <button>Gerar QR Code</button>
+            <button> Gerar QR Code</button>
+          </div>
+        </div>
+
+        <div className="ContainerNotas">
+          <h2>Suas Notas</h2>
+          <div className="NotasList">
+            {testeNotas.map((nota) => (
+              <CardNota
+                key={nota.id}
+                id={nota.id}
+                titulo={nota.titulo}
+                valor={nota.valor}
+                data={nota.data}
+                hora={nota.hora}
+              />
+            ))}
           </div>
         </div>
       </main>
