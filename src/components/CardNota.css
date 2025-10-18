@@ -1,5 +1,27 @@
 .CardNota{
+    height: 120px;
     background-color: #007B00;
     width: 25vw;
     border-radius: 15px;
+    height: auto;
+}
+
+.NotaTopo{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-weight: 600;
+    
+}
+
+.NotaRodape {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: italic;
 }

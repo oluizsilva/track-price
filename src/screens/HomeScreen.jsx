@@ -25,7 +25,7 @@ function HomeScreen() {
     {
       id: 3,
       titulo: "Farmácia Saúde",
-      valor: 25.5,
+      valor: 58,
       data: "15/09/2025",
       hora: "16:45",
     },
@@ -38,27 +38,27 @@ function HomeScreen() {
       <header className="HeaderHome">
         <span className="HeaderTitle"> Track Price</span>
         <button className="UserButton">
-          <User /> {/* TODO: foto e nome inseridos pelo user */}
+          <User/> {/* TODO: foto e nome inseridos pelo user */}
         </button>
       </header>
 
       <main className="MainHome">
         <div className="ResumoMes">
           <div className="MesInfo">
-            <h3>{"<Outubro de 2025>"}</h3> {/* TODO: Deverá ser dinâmico */}
+            <h3>{"< Outubro de 2025 >"}</h3> {/* TODO: Deverá ser dinâmico */}
             <h4>Total Mensal: R$ {totalMes}</h4> {/* TODO: Deverá ser dinâmico */}
           </div>
 
           <div>
-            <button className="BotaoQR"> <ScanLine />Ler QR Code</button>
+            <button className="BotaoQR"> <ScanLine size={36} />Ler QR Code</button>
           </div>
         </div>
 
         <div className="ContainerNotas">
           <h2 className="ContainerTitulo">Suas Notas</h2>
-          <div className="NotasList">
-            {testeNotas.map((nota) => (
-              <CardNota
+          <div className="NotasList"> 
+            {testeNotas.map((nota) => ( 
+              <CardNota 
                 key={nota.id}
                 id={nota.id}
                 titulo={nota.titulo}

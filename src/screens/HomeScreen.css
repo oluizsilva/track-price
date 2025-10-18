@@ -41,6 +41,16 @@ html,
   width: 8vh;
 }
 
+.UserButton:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px #333;
+  background-color: #ffffff;
+  color:black
+
+
+
+}
+
 .ResumoMes {
  
   display: flex; 
@@ -49,20 +59,33 @@ html,
   align-items: center;
   width: 500px;
   margin: 0 auto;
+  margin-top: 30px;
 }
 
 .BotaoQR {
   background-color: #71c55b;
-  width: 167px;
+  width: 200px;
   height: 60px;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+.BotaoQR:hover {
+  background-color: #5aa947;
+  cursor: pointer;
+}
+
+.ContainerTitulo {
+  font-weight: 600;
+  
+}
+ 
 
 .ContainerNotas {
   display: flex; 
@@ -71,12 +94,11 @@ html,
   align-items: center;
   width: 500px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
-.ContainerTitulo {
-  
-  
-
-  
+.NotasList{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
- 
