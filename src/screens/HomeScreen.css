@@ -60,6 +60,14 @@ html,
   width: 500px;
   margin: 0 auto;
   margin-top: 30px;
+  text-align: center;
+}
+
+.NavegarMes{
+  background-color: transparent;
+  border:none;
+  
+  font-size: 16px;
 }
 
 .BotaoQR {

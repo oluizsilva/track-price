@@ -6,12 +6,9 @@ function CardNota({ id, titulo, valor, data, hora, onClick }) {
     <div className="CardNota" onClick={onClick}>
       <div className="NotaTopo">
         <h3>{titulo}</h3>
-        <p>
-          <span className="NotaID">ID:</span> {id}
-        </p>
       </div>
       <div className="NotaRodape">
-        <p>
+        <p id="datahora">
           {data}-{hora}
         </p>
         <p>
