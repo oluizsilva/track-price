@@ -6,6 +6,9 @@
   height: auto;
   
 }
+.CardNota:hover {
+  cursor: pointer;
+}
 
 .NotaTopo {
   margin-left: 10px;

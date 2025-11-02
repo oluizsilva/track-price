@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { testeNotas } from "../data/testeNotas";
 import CardNota from "../components/CardNota";
 import { User } from "lucide-react";
@@ -8,7 +8,8 @@ import { ScanLine } from "lucide-react";
 import "./HomeScreen.css";
 
 function HomeScreen() {
- 
+  
+  const navigate = useNavigate();
   const totalMes = testeNotas.reduce((acc, nota) => acc + nota.valor, 0);
 
   return (
@@ -53,6 +54,7 @@ function HomeScreen() {
                 valor={nota.valor}
                 data={nota.data}
                 hora={nota.hora}
+                onClick={() => navigate(`/nota/${nota.id}`)}
               />
             ))}
           </div>
