@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 const server = express();
 
 server.get('/', (request, response) => {
-    response.send('AAAAA');
+    response.send('Atualizando');
 
 });
 
@@ -22,7 +22,7 @@ server.listen(port, () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://terramedia.fandom.com/wiki/O_Senhor_dos_An%C3%A9is');
-    // await page.screenshot({ path: 'example.png' });
+    // await page.screenshot({ path: 'example.png' }); 
 
     await browser.close();
 })();
