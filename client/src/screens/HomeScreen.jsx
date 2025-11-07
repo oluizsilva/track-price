@@ -1,16 +1,40 @@
 import React from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { testeNotas } from "../data/testeNotas";
 import CardNota from "../components/CardNota";
-import { User } from "lucide-react";
-import { ScanLine } from "lucide-react";
+import { ScanLine, User } from "lucide-react";
 
+import { Html5QrcodeScanner } from "html5-qrcode";
+import { useState } from "react";
 import "./HomeScreen.css";
 
 function HomeScreen() {
-  
   const navigate = useNavigate();
   const totalMes = testeNotas.reduce((acc, nota) => acc + nota.valor, 0);
+
+  const [scanResult, setScanResult] = useState(null);
+
+  useEffect(() => {
+    const scanner = new Html5QrcodeScanner("reader", {
+      qrbox: {
+        width: 250,
+        height: 250,
+      },
+      fps: 5,
+    });
+
+    scanner.render(success, error);
+
+    function success(result) {
+      scanner.clear();
+      setScanResult(result);
+    }
+
+    function error(err) {
+      console.warn(err);
+    }
+  });
 
   return (
     <>
@@ -34,9 +58,15 @@ function HomeScreen() {
             {/* TODO: Deverá ser dinâmico */}
           </div>
 
-          <div>
+          <div id="reader">
+
+            {scanResult
+              ? <div>Success: <a href={"http://"+scanResult}>{scanResult}</a></div>
+              : <div>Erro ao ler QR Code</div>
+            }
+
+
             <button className="BotaoQR">
-              {" "}
               <ScanLine size={36} />
               Ler QR Code
             </button>

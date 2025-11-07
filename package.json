@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "express": "^5.1.0",
+    "html5-qrcode": "^2.3.8",
     "lucide-react": "^0.545.0",
     "puppeteer": "^24.27.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-qr-code": "^2.0.18",
     "react-router-dom": "^7.9.5"
   },
   "devDependencies": {
